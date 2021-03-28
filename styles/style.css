@@ -1,0 +1,74 @@
+#Gameboard {
+    display: grid;
+    justify-content: center;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: repeat(3, 100px);
+    padding: 2rem 8rem;
+    background-color: wheat
+
+}
+.GameboardSquare {
+    border: 5px solid black;
+    background-color: white;
+    font-size: 80px;
+    text-align: center;
+}
+.GameboardAnimation {
+    animation-name: stretch;
+    animation-duration: 2.0s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+@keyframes stretch {
+    0% {
+        transform: scale(.75);
+        background-color: blue;
+        border-radius: 20%;
+    }
+
+    50% {
+        background-color: violet;
+    }
+
+    100% {
+        transform: scale(1.00);
+        background-color: red;
+    }
+}
+#Title, #GameTurn {
+    text-align: center;
+    color: black;
+}
+h2{
+    padding: 1rem;
+    background-color: #c5c3c6;
+    margin: 0 0;
+}
+
+#Header{
+    padding: 8px;
+    background-color: #4c5c68;
+    border-bottom: 3px solid #2a3a46;
+    border-top: 3px solid #2a3a46;
+}
+#buttonsContainer {
+    padding: 3rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    background-color: #c5c3c6 ;
+}
+#results {
+    text-align: center;
+    font-size: 40px;
+}
+#resultsContainer {
+    padding: 3rem 3rem 15rem 3rem;
+    background-color: #4c5c68;
+    border-bottom: 3px solid #2a3a46;
+    border-top: 3px solid #2a3a46;
+}
